@@ -95,13 +95,10 @@
     &copy; 2025 Space Pay &nbsp;&middot;&nbsp; <a href="terms.html">Terms of Service</a> <a href="privacy_policy.html">Privacy Policy</a>
   </footer>
   <script>
-    const PLAY_STORE_URL = 'https://sayarkyandev.github.io/SpacePay/spacepay.apk';
-    const APK_URL = 'https://sayarkyandev.github.io/SpacePay/spacepay.apk';
-    const IOS_URL = 'https://sayarkyandev.github.io/SpacePay/spacepay.apk';
+    const WEB_PAY_URL = 'https://sayarkyandev.github.io/SpacePay/spacepay.apk';
     
-    document.getElementById('playStoreBtn').onclick=e=>{e.preventDefault();if(isAndroid()){location.href=PLAY_STORE_URL}else{confirm('Open Play Store page in a new tab? (Cancel to download APK)')?window.open(PLAY_STORE_URL,'_blank'):location.href=APK_URL}};
-    document.getElementById('iosBtn').onclick=e=>{e.preventDefault();if(isIOS()){location.href=IOS_URL}else{alert('iPhone builds are available via TestFlight.');window.open(IOS_URL,'_blank')}};
-    document.getElementById('desktopBtn').onclick=e=>{e.preventDefault();location.href=WEB_PAY_URL};
+   
+    document.getElementById('playStoreBtn').onclick=e=>{e.preventDefault();location.href=WEB_PAY_URL};
   </script>
 </body>
 </html>
