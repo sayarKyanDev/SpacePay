@@ -46,30 +46,24 @@
       <a href="#features">Features</a>
       <a href="#tutorial">Tutorial</a>
       <a href="#faq">FAQ</a>
-      <a href="terms_of_service.html">Terms</a>
-      <a href="privacy_policy.html">Privacy</a>
+      <a href="terms">Terms of Service</a>
+      <a href="privacy_policy.html">Privacy Policy</a>
     </nav>
   </header>
+
   <main class="container">
     <section class="hero fade-in">
-      <div>
+      <div id="download">
         <h1>Pay Starlink & Bills — Fast, Local, Secure</h1>
         <p class="lead">Space Pay lets you pay Starlink bills and other utilities using local methods like KBZ Pay, Wave Money, and banks. Simple UI, transparent fees, and reliable receipts.</p>
-        <div class="buttons" id="download">
-          <a class="btn" id="playStoreBtn" href="#">Download for Android <span class="badge">APK / Play Store</span></a>
-          <a class="btn" id="iosBtn" href="#">Download for iPhone <span class="badge">TestFlight / App Store</span></a>
-          <a class="btn" id="desktopBtn" href="#">Open Web Pay <span class="badge">Browser</span></a>
+        <div class="buttons">
+          <a class="btn" id="playStoreBtn" href="#">Download for Android <span class="badge">APK</span></a>
+          <!-- <a class="btn" id="iosBtn" href="#">Download for iPhone <span class="badge">TestFlight / App Store</span></a>
+          <a class="btn" id="desktopBtn" href="#">Open Web Pay <span class="badge">Browser</span></a> -->
         </div>
         <div style="margin-top:18px;color:#9a9a9a;font-size:13px">Last updated: August 8, 2025</div>
       </div>
-      <div class="phone-mock fade-in" aria-hidden="true">
-        <div class="screen">
-          <div style="text-align:center">
-            <div style="font-weight:700;color:#ddd;margin-bottom:8px">Space Pay</div>
-            <div style="color:#666;font-size:13px">App preview</div>
-          </div>
-        </div>
-      </div>
+     
     </section>
     <section id="features" class="fade-in">
       <h2 style="text-transform:uppercase;margin-bottom:18px">Features</h2>
@@ -79,15 +73,15 @@
         <div class="feature"><h3>Secure</h3><p>We never store raw card or bank credentials — payments handled by trusted providers.</p></div>
         <div class="feature"><h3>Multi-Language</h3><p>Simple UI that supports Burmese and English for easy navigation.</p></div>
       </div>
-      <div class="screens" aria-hidden="true">
+      <!-- <div class="screens" aria-hidden="true">
         <div class="shots"><div class="shot">Screenshot 1</div><div class="shot">Screenshot 2</div></div>
         <div class="shots"><div class="shot">Screenshot 3</div><div class="shot">Screenshot 4</div></div>
-      </div>
+      </div> -->
     </section>
     <section id="tutorial" class="fade-in" style="margin-top:40px">
       <h2 style="text-transform:uppercase;margin-bottom:18px">Video Tutorial</h2>
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;border:1px solid #222">
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Space Pay Tutorial" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>
+        <iframe src="https://www.youtube.com/embed/QFLPLt97zfs" title="Space Pay Tutorial" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>
       </div>
     </section>
     <section id="faq" class="faq fade-in">
@@ -98,12 +92,13 @@
     </section>
   </main>
   <footer>
-    &copy; 2025 Space Pay &nbsp;&middot;&nbsp; <a href="terms.html">Terms of Service</a> <a href="privacy_policy.html">Privacy</a>
+    &copy; 2025 Space Pay &nbsp;&middot;&nbsp; <a href="terms.html">Terms of Service</a> <a href="privacy_policy.html">Privacy Policy</a>
   </footer>
   <script>
-    const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.spacepay.app';
-    const isAndroid = ()=>/Android/i.test(navigator.userAgent);
-    const isIOS = ()=>/iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const PLAY_STORE_URL = 'https://sayarkyandev.github.io/SpacePay/spacepay.apk';
+    const APK_URL = 'https://sayarkyandev.github.io/SpacePay/spacepay.apk';
+    const IOS_URL = 'https://sayarkyandev.github.io/SpacePay/spacepay.apk';
+    
     document.getElementById('playStoreBtn').onclick=e=>{e.preventDefault();if(isAndroid()){location.href=PLAY_STORE_URL}else{confirm('Open Play Store page in a new tab? (Cancel to download APK)')?window.open(PLAY_STORE_URL,'_blank'):location.href=APK_URL}};
     document.getElementById('iosBtn').onclick=e=>{e.preventDefault();if(isIOS()){location.href=IOS_URL}else{alert('iPhone builds are available via TestFlight.');window.open(IOS_URL,'_blank')}};
     document.getElementById('desktopBtn').onclick=e=>{e.preventDefault();location.href=WEB_PAY_URL};
