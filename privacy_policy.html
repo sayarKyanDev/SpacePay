@@ -116,6 +116,11 @@
         from { opacity: 0; transform: translateY(10px); }
         to { opacity: 1; transform: translateY(0); }
     }
+
+    .note {
+        font-size: 14px;
+        color: #9aa0a6;
+    }
 </style>
 </head>
 <body>
@@ -125,7 +130,8 @@
 
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="update-date">Last Updated: August 6, 2025</p>
+        <!-- UPDATED DATE -->
+        <p class="update-date">Last Updated: August 24, 2025</p>
 
         <p>This Privacy Policy governs the use of the "Space Pay" mobile application, developed by Sayar Kyan. We respect your privacy and are committed to protecting your personal information. This policy explains what information we collect, how we use it, and your rights related to your data when you use our App and services.</p>
 
@@ -160,11 +166,21 @@
         <h3>D. Google Sign-In Data</h3>
         <p>If you choose to sign in with Google, we collect basic profile information such as your Google account email and name to authenticate and personalize your experience.</p>
 
+        <!-- NEW: Schedule Data -->
+        <h3>E. Schedule Data (Auto-Pay)</h3>
+        <p>If you use the Schedule feature, we may collect information needed to create and run your scheduled payments and reminders, for example:</p>
+        <ul>
+            <li>Chosen bill due date and preferred reminder time window</li>
+            <li>Selected payment method <span class="note">(e.g., KBZ Pay or Wave Money provider selection only; we do not store your payment credentials)</span></li>
+            <li>Task status (scheduled, running, completed, failed) and related transaction identifiers</li>
+            <li>Notification preferences</li>
+        </ul>
+
         <h2>2. How We Use Your Information</h2>
         <p>The information collected is used for the following purposes:</p>
         <ul>
             <li>To provide and maintain App features and services</li>
-            <li>To process your payments and fulfill orders</li>
+            <li>To process your payments and fulfill orders, including scheduled (auto) payments when you enable them</li>
             <li>To communicate important updates and changes</li>
             <li>To offer customer support and respond to inquiries</li>
             <li>To analyze and improve App performance and security</li>
@@ -175,7 +191,7 @@
         <p>We take reasonable measures to protect your personal information using commercially acceptable security technologies and procedures. However, no method of transmission over the Internet or electronic storage is completely secure. We cannot guarantee absolute security.</p>
 
         <h2>4. Data Retention</h2>
-        <p>We retain your personal information only as long as necessary to provide services or comply with legal obligations. You may request deletion of your data by contacting us (see below).</p>
+        <p>We retain your personal information only as long as necessary to provide services or comply with legal obligations. You may request deletion of your data by contacting us (see below). If you delete your account or disable the Schedule feature, pending scheduled tasks may be canceled.</p>
 
         <h2>5. Your Rights</h2>
         <p>You have the right to:</p>
@@ -191,11 +207,12 @@
         <ul>
             <li>Payment processors (KBZ Pay, Wave Money)</li>
             <li>Google Firebase for analytics and authentication</li>
+            <li>Notification and background task services to deliver reminders and run scheduled payments</li>
         </ul>
         <p>These providers have their own privacy policies. We encourage you to review them before using their services.</p>
 
         <h2>7. Refunds and Disputes</h2>
-        <p>If you experience any issues with payments, refunds, or services, please contact our support team. Refunds are handled on a case-by-case basis and may require verification of transaction details.</p>
+        <p>If you experience any issues with payments, refunds, or services, please contact our support team. Refunds are handled on a case-by-case basis and may require verification of transaction details. For scheduled payments, please contact us as soon as possible after an unexpected charge if you believe an error occurred.</p>
 
         <h2>8. Disclaimer</h2>
         <p>This App is not affiliated, endorsed, or sponsored by Starlink or SpaceX. It simply facilitates bill payments using available local payment methods.</p>
@@ -209,6 +226,33 @@
             Email: <a href="mailto:spacepay.help@gmail.com">spacepay.help@gmail.com</a><br />
             Telegram: <a href="https://t.me/SpacePaySupportTeam" target="_blank">@SpacePaySupportTeam</a>
         </p>
+
+        <!-- NEW: Scheduled Payments Section -->
+        <h2>11. Scheduled Payments ("Schedule" Feature)</h2>
+        <p>To help Starlink users avoid service restrictions or account suspension due to late bill payments, Space Pay offers an optional Schedule feature.</p>
+        <h3>How it works</h3>
+        <ul>
+            <li>You choose the bill date and optionally set a reminder time.</li>
+            <li>At the scheduled time, the App attempts to process your payment automatically via your selected provider (e.g., KBZ Pay or Wave Money).</li>
+            <li>We may send notifications about upcoming, successful, or failed attempts as per your settings.</li>
+        </ul>
+        <h3>Your consent and control</h3>
+        <ul>
+            <li>The feature is <strong>opt-in</strong>. You may edit, pause, or cancel your schedule at any time in the App.</li>
+            <li>Disabling the feature stops future automated attempts, but does not affect payments already completed.</li>
+        </ul>
+        <h3>What we store</h3>
+        <ul>
+            <li>Schedule metadata (due date/time, provider selection, status, and related transaction identifiers).</li>
+            <li>We do <strong>not</strong> store your sensitive payment credentials; those are handled by the payment provider.</li>
+        </ul>
+        <h3>Failures and limitations</h3>
+        <ul>
+            <li>Payments may fail for reasons beyond our control (e.g., insufficient balance, provider downtime, incorrect account details).</li>
+            <li>If a scheduled attempt fails, we will notify you and may provide options to retry.</li>
+            <li>Time references are applied using your device settings unless otherwise stated. Please ensure your device time zone is correct.</li>
+        </ul>
+        
     </div>
 
     <footer>
